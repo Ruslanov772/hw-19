@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<div class="div" style="width: 500px; height: 500px; background: red"></div>
+<body>
+    <script>
+        const div = document.querySelector('.div');
+        div.addEventListener('click', (e) => {
+            console.log(`X = ${e.clientX}, Y = ${e.clientY}`);
+        })
+    </script>
+</body>
+</html>

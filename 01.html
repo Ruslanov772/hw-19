@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container" style="width: 500px; height: 500px"></div>
+<script>
+    const div = document.querySelector('body');
+
+    document.addEventListener('keydown', (event) => {
+        if (event.which === 82) {
+            div.style = 'background: red;'
+
+        } else if (event.which === 71) {
+            div.style = 'background: green;'
+        }  else if (event.which === 66) {
+            div.style = 'background: blue;'
+        }  else if (event.which === 87) {
+            div.style = 'background: white;'
+        }
+        console.log(event.key.toUpperCase());
+
+        console.log(event.key)
+    });
+    document.addEventListener('keydown', (event) => {
+     if (event.shiftKey && event.keyCode === 66) { //Shif+TAB
+            div.style = 'background: black;'
+        } else if (event.shiftKey && event.keyCode === 71) {
+         div.style = 'background: gray;'
+     }
+    });
+</script>
+</body>
+</html>

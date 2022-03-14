@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="color" style="margin: 100px;">
+<script>
+    const input = document.querySelector('#color');
+
+    input.addEventListener('keyup', (e) => {
+        document.querySelector("body").style = `background: ${input.value}`
+    })
+</script>
+</body>
+</html>
