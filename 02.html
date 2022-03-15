@@ -3,19 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button type="button" id="btn">Click</button>
-
+<div class="container">
+    <button type="button" id="btn">Click</button>
+    <div class="container-num" id="num-bg">
+        <p id="num">0</p>
+    </div>
+</div>
 <script>
   const btn = document.getElementById('btn');
-  let num = 1;
+  const num = document.getElementById('num');
+  let i = 0
   btn.addEventListener('click', () => {
-      num = num * 2;
-      console.log(num);
-
+      if (i === 0) {
+          i++;
+      } else {
+          i = i * 2;
+          console.log(i);
+          num.innerHTML = i;
+      }
+      randColor()
   })
-  console.log(num);
+  console.log(i);
+
+  const randColor = () => {
+      const element = document.getElementById('num-bg'),
+          r = Math.floor(Math.random() * (256)),
+          g = Math.floor(Math.random() * (256)),
+          b = Math.floor(Math.random() * (256)),
+          color = '#' + r.toString(16) + g.toString(16) + b.toString(16);
+      element.style.backgroundColor = color;
+  }
 </script>
 </body>
 </html>
