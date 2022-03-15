@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="container" style="font-size: 20px">
-    <p>По нажатию клавиш меняйте цвет заднего </p>
+    <p>По нажатию клавиш меняем цвет заднего фона</p>
     <ul>
         <li>R- red</li>
         <li>G - green;</li>
@@ -17,25 +17,25 @@
     </ul>
 </div>
 <script>
-    const div = document.querySelector('body');
+    const body = document.querySelector('body');
 
     document.addEventListener('keydown', (event) => {
         if (event.which === 82) {
-            div.style = 'background: red;'
+            body.style = 'background: red;'
         } else if (event.which === 71) {
-            div.style = 'background: green;'
+            body.style = 'background: green;'
         }  else if (event.which === 66) {
-            div.style = 'background: blue;'
+            body.style = 'background: blue;'
         }  else if (event.which === 87) {
-            div.style = 'background: white;'
+            body.style = 'background: white;'
         }
     });
 
     document.addEventListener('keydown', (event) => {
      if (event.shiftKey && event.keyCode === 66) {
-            div.style = 'background: black;'
+         body.style = 'background: black;'
         } else if (event.shiftKey && event.keyCode === 71) {
-         div.style = 'background: gray;'
+         body.style = 'background: gray;'
      }
     });
 </script>
